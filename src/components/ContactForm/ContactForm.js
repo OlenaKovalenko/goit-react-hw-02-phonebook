@@ -1,5 +1,5 @@
 import { Formik, Field } from 'formik';
-import * as Yup from 'yup';
+// import * as Yup from 'yup';
 import { StyledForm } from './ContactForm.styled';
 
 // const schema = Yup.object().shape({
