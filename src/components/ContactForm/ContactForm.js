@@ -1,7 +1,7 @@
 import { Formik, Field } from 'formik';
 import { StyledForm } from './ContactForm.styled';
 
-export const ContactForm = () => (
+export const ContactForm =({ onAdd }) => (
     <div>
         <Formik
             initialValues={{
@@ -9,7 +9,8 @@ export const ContactForm = () => (
             number: '',
             }}
             
-            onSubmit={ values => {
+            onSubmit={values => {
+                onAdd(values);
                 console.log(values);
         }}
         >
