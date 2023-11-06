@@ -9,9 +9,9 @@ export const ContactForm =({ onAdd }) => (
             number: '',
             }}
             
-            onSubmit={values => {
+            onSubmit={(values, actions) => {
                 onAdd(values);
-                console.log(values);
+                actions.resetForm();
         }}
         >
             <StyledForm>

@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import { ContactForm } from './ContactForm/ContactForm';
 import { GlobalStyle } from './GlobalStyle';
-import { nanoid } from 'nanoid';
+import { ContactList } from './ContactList/ContactList';
 
 
 export class App extends Component {
@@ -11,17 +11,17 @@ export class App extends Component {
     // filter: ''
   } 
 
-  // addContact = newContact => {
-  //   const contact = {
-  //     ...newContact,
-  //     id: nanoid(),
-  //   };
+  addContact = newContact => {
+    const contact = {
+      ...newContact,
+      id: nanoid(),
+    };
 
-  //   this.setState(prevState => {
-  //     return {
-  //       contacts: [...prevState.contacts, contact]
-  //     }
-  //   })
+    this.setState(prevState => {
+      return {
+        contacts: [...prevState.contacts, contact]
+      }
+    })
 
   }
   render() { 
@@ -31,8 +31,8 @@ export class App extends Component {
       <ContactForm onAdd={this.addContact}/>
 
       <h2>Contacts</h2>
-      {/* <Filter />
-      <ContactList /> */}
+      {/* <Filter /> */}
+      <ContactList items={this.state.contacts} />
       
       <GlobalStyle />
     </div>
