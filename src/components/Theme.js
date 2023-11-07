@@ -5,6 +5,7 @@ export const theme = {
         lightGrey: '#C0C0C0',
         lightBlue: '#87CEEB',
         blue: 'blue',
+        red: 'red',
     },
 
     radii: {

@@ -1,12 +1,11 @@
-export const ContactList = ({ items, onDelete }) => {
+import { ContactItem } from "components/ContactItem/ContactItem";
 
+export const ContactList = ({ items, onDelete }) => {
     return (
         <ul>
             {items.map(item => (
-                <li key={item.id}>
-                    <p>{item.name}: {item.number}</p>
-                    <button type="button" onClick={() => onDelete(item.id)}>Delete</button>
-                </li>
+                <ContactItem key={item.id} onDelete={onDelete} item={item } />
+               
             ))}
         </ul>
     )
