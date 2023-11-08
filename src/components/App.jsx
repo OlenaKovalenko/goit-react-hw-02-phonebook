@@ -4,7 +4,7 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { GlobalStyle } from './GlobalStyle';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
-import { AppContainer } from './App.styled';
+import { AppContainer, ContactsTitle, MainTitle } from './App.styled';
 
 
 export class App extends Component {
@@ -53,12 +53,12 @@ export class App extends Component {
 
     return (
       <AppContainer>
-      <h1>Phonebook</h1>
+      <MainTitle>Phonebook</MainTitle>
         <ContactForm onAdd={this.addContact} />
         
         {contacts.length > 0 ? (
           <>
-            <h2>Contacts</h2>
+            <ContactsTitle>Contacts</ContactsTitle>
             <Filter value={filter} onFind={this.changeFilter}/>
             <ContactList items={visibleContacts} onDelete={this.deleteContact}/>
           </>

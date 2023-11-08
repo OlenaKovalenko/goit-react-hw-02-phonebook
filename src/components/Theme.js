@@ -6,11 +6,13 @@ export const theme = {
         lightBlue: '#87CEEB',
         blue: 'blue',
         red: 'red',
+        green: 'green',
+        darkGreen: '#004000'
     },
 
     radii: {
         sm: '4px',
-        md: '8px',
+        md: '12px',
         lg: '16px',
     },
     
