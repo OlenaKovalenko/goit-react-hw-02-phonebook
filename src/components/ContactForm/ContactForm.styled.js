@@ -37,7 +37,7 @@ export const BtnAddContact = styled.button`
     padding: ${p => p.theme.spacing(2)};
     margin-right: auto;
     margin-left: auto;
-    margin-top: ${p => p.theme.spasing(3)};
+    margin-top: ${p => p.theme.spacing(6)};
     background-color: ${p => p.theme.colors.green};
     color: ${p => p.theme.colors.white};
     border-radius: ${p => p.theme.radii.lg};
