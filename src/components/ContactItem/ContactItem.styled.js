@@ -26,9 +26,11 @@ export const BtnDelete = styled.button`
     border: none;
     font-size: 16px;
     font-weight: 400;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-weight 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
-    &:hover{
+    &:hover,
+    &:focus {
         background-color: ${p => p.theme.colors.red};
         font-weight: 600;
     }

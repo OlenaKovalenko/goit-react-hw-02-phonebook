@@ -43,6 +43,8 @@ export const BtnAddContact = styled.button`
     margin: 0 auto;
     font-size: 18px;
     font-weight: 400;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-weight 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
     &:hover{
         border: 4px solid ${p => p.theme.colors.darkGreen};
