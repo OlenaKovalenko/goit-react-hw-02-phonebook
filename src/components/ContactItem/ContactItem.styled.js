@@ -31,7 +31,6 @@ export const BtnDelete = styled.button`
     &:hover{
         background-color: ${p => p.theme.colors.red};
         font-weight: 600;
-
     }
 
 `;

@@ -13,24 +13,25 @@ export class App extends Component {
     filter: ''
   } 
 
-  addContact = newContact => {
+  addContact = ({name, number}) => {
     const { contacts } = this.state;
 
-    const contact = {
-      ...newContact,
+    const newContact = {
+      name,
+      number,
       id: nanoid(),
     };
 
-    const isExist = contacts.some(item => item.name.toLowerCase() === newContact.name.toLowerCase());
+    const isExist = contacts.some(contact => contact.name.toLowerCase() === name.toLowerCase());
 
     if (isExist) {
-      alert(`${newContact.name} is alredy in contacts.`);
+      alert(`${name} is alredy in contacts.`);
       return;
     }
 
     this.setState(prevState => {
       return {
-        contacts: [...prevState.contacts, contact]
+        contacts: [...prevState.contacts, newContact]
       }
     })
   }

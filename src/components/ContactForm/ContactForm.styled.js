@@ -1,33 +1,40 @@
-import { Field, Form } from "formik";
+import { Field, Form, ErrorMessage} from "formik";
 import styled from 'styled-components';
 
 export const StyledForm = styled(Form)`
     display: inline-flex;
     flex-direction: column;
-    width: 300px;
+    width: 400px;
     gap: ${p => p.theme.spacing(2)};
-    margin-bottom: ${p => p.theme.spacing(6)};
+    margin-bottom: ${p => p.theme.spacing(8)};
 `;
 
 export const FormLabel = styled.label`
     text-align: start;
     font-size: 16px;
-    font-weight: 400;
-    color: ${p => p.theme.colors.grey};
+    font-weight: 500;
+    color: ${p => p.theme.colors.black};
 
 `;
 
 export const StyledField = styled(Field)`
-    padding: ${p => p.theme.spacing(1)};
+    padding: ${p => p.theme.spacing(1)} ${p => p.theme.spacing(3)};
     border: 1px solid ${p => p.theme.colors.blue};
     border-radius: ${p => p.theme.radii.md};
     font-size: 18px;
     font-weight: 400;
 `;
 
+export const ErrorMsg = styled(ErrorMessage)`
+    color: ${p => p.theme.colors.red};
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: auto;
+`;
+
 export const BtnAddContact = styled.button`
     width: 180px;
-    margin-bottom: ${p => p.theme.spacing(20)};
+    margin-top: 200px;
     padding: ${p => p.theme.spacing(2)};
     background-color: ${p => p.theme.colors.green};
     color: ${p => p.theme.colors.white};

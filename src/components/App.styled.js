@@ -22,6 +22,6 @@ export const MainTitle = styled.h1`
 
 export const ContactsTitle = styled.h2`
     color: ${p => p.theme.colors.black};
-    margin-bottom: ${p => p.theme.spacing(6)};
+    margin-bottom: ${p => p.theme.spacing(2)};
     font-size: 32px;
 `;
