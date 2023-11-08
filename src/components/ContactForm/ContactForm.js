@@ -17,29 +17,29 @@ const validationSchema = Yup.object().shape({
 });
 
 export const ContactForm =({ onAdd }) => (
-        <Formik
-            initialValues={{
-            name: '',
-            number: '',
-            }}
-            
-            validationSchema={validationSchema}
-
-            onSubmit={(values, actions) => {
-                onAdd(values);
-                actions.resetForm();
+    <Formik
+        initialValues={{
+        name: '',
+        number: '',
         }}
-        >
-            <StyledForm>
-                <FormLabel htmlFor="name">Name</FormLabel>
-                <StyledField type="text" name="name" placeholder="John Smith" />
-                <ErrorMsg name="name" component="div" />
+        
+        validationSchema={validationSchema}
 
-                <FormLabel htmlFor="number">Number</FormLabel>
-                <StyledField type="tel" name="number" placeholder="+380..." />
-                <ErrorMsg name="number" component="div" />
-                            
-                <BtnAddContact type="submit">Add contact</BtnAddContact>
-            </StyledForm>
-        </Formik>
+        onSubmit={(values, actions) => {
+            onAdd(values);
+            actions.resetForm();
+    }}
+    >
+        <StyledForm>
+            <FormLabel htmlFor="name">Name</FormLabel>
+            <StyledField type="text" name="name" placeholder="John Smith" />
+            <ErrorMsg name="name" component="div" />
+
+            <FormLabel htmlFor="number">Number</FormLabel>
+            <StyledField type="tel" name="number" placeholder="+380..." />
+            <ErrorMsg name="number" component="div" />
+                        
+            <BtnAddContact type="submit">Add contact</BtnAddContact>
+        </StyledForm>
+    </Formik>
 );
