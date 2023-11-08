@@ -28,7 +28,7 @@ export const ContactForm =({ onAdd }) => (
         onSubmit={(values, actions) => {
             onAdd(values);
             actions.resetForm();
-    }}
+        }}
     >
         <StyledForm>
             <FormLabel htmlFor="name">Name</FormLabel>
@@ -38,7 +38,7 @@ export const ContactForm =({ onAdd }) => (
             <FormLabel htmlFor="number">Number</FormLabel>
             <StyledField type="tel" name="number" placeholder="+380..." />
             <ErrorMsg name="number" component="div" />
-                        
+
             <BtnAddContact type="submit">Add contact</BtnAddContact>
         </StyledForm>
     </Formik>
