@@ -42,7 +42,7 @@ export class App extends Component {
 
   deleteContact = (contactId) => {
     this.setState(prevState => {
-      return { contacts: prevState.contacts.filter(item => item.id !== contactId)}
+      return { contacts: prevState.contacts.filter(contact => contact.id !== contactId)}
     })
   }
 
@@ -50,7 +50,7 @@ export class App extends Component {
     const { contacts, filter } = this.state;
     const normalizedFilter = filter.toLowerCase().trim();
 
-    const visibleContacts = contacts.filter(item => item.name.toLowerCase().includes(normalizedFilter));
+    const visibleContacts = contacts.filter(contact => contact.name.toLowerCase().includes(normalizedFilter));
 
     return (
       <AppContainer>
