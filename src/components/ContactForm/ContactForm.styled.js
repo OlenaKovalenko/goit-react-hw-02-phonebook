@@ -34,13 +34,14 @@ export const ErrorMsg = styled(ErrorMessage)`
 
 export const BtnAddContact = styled.button`
     width: 180px;
-    margin-top: 200px;
     padding: ${p => p.theme.spacing(2)};
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: ${p => p.theme.spasing(3)};
     background-color: ${p => p.theme.colors.green};
     color: ${p => p.theme.colors.white};
     border-radius: ${p => p.theme.radii.lg};
     border: 4px solid ${p => p.theme.colors.green};
-    margin: 0 auto;
     font-size: 18px;
     font-weight: 400;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-weight 250ms cubic-bezier(0.4, 0, 0.2, 1);
